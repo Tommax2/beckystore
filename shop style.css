@@ -141,7 +141,7 @@ display: none;}
     position: fixed;
     top:0; left:0;
      
-     height: 100vh; 
+     height: auto; 
     width: 100%;
     background: rgba(0,0,0,.8);
     display: none;
@@ -359,12 +359,16 @@ display: none;}
     color: aqua;
 
 }
+    .previews img,
+.previews1 img{
+    height: 20rem;
+}
     .previews,
 .previews1{
     margin: 20px;
     padding: 20px;
     margin-top: 10em;
-     width: 20rem;
+     width: 28rem;
 }
 
     .container .title{
