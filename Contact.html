@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us page</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="contact us style.css" />
+  </head>
+  <body>
+    <header class="headar" id="header">
+      <div class="container">
+        <a href="index.html" class="nav_logo">
+          <i class="bx bxs-shopping-bags"></i> EverythingbyBecky
+        </a>
+        <nav class="nav_menu" id="nav-menu">
+          <a href="index.html">Home</a>
+          <a href="Shop.html">Shop</a>
+          <a href="About us.html">About us</a>
+          <a href="Contact.html">Contact</a>
+        </nav>
+        <i id="menuicon" class="bx bx-menu"></i>
+      </div>
+    </header>
+    <div class="contact">
+      <div class="container">
+        <div class="title"><h2>Contact Us</h2></div>
+        <h2>need any product?</h2>
+        <h3>Get in touch with us</h3>
+        <h1>Feel free to send us a mail or give us a call</h1>
+        <div class="icon">
+          <div class="phone">
+            <i class="bx bxs-phone" style="color: #131414"></i>
+            <div>
+              <h1>need a ask a questions?</h1>
+              <a href="">+234 903 990 9031</a>
+            </div>
+          </div>
+          <div class="email">
+            <i class="bx bxs-envelope" style="color: #131414"></i>
+            <div>
+              <h1>write an email</h1>
+              <a href="mailto: abc@gmail.com?Subject= I want to make inquiry"
+                >rebeccaaderounke@gmail.com</a
+              >
+            </div>
+          </div>
+          <div class="location">
+            <i class="bx bxs-location-plus" style="color: #131414"></i>
+            <div>
+              <h1>visits us anytime</h1>
+              <a href="">Opposite kogi polytechnic, lokoja, kogi state.</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="ready">
+          <div>
+           <h3>Ready to work with us?</h3>
+           <p>Experience top-notch customber service and let us guide you on aesthetic decorations </p>
+          </div>
+        </div>
+        <div class="links">
+          <div>
+            <h3>Home</h3>
+            <a href="Shop.html">Shop </a>
+            <a href="About us.html">About US </a>
+            <a href="Contact.html"> Contact </a>
+           </div>
+           <div >
+            <h3>Socal media </h3>
+            <a href="https://www.instagram.com/everythingbybecky3?igsh=MXI0ZDN5c2kwdGM2Mg%3D%3D&utm_source=qr">instagram</a>
+            <a href="https://wa.me/message/EVHDKAYQBN2IH1">whatsapp</a>
+            <a href="https://www.tiktok.com/@everythingbybecky234?_t=8pm34RZixk6&_r=1">tiktok</a>
+           </div>
+        </div>
+      
+       
+
+      </div>
+     </footer>
+  
+  <script>
+      let menuIcon = document.querySelector("#menuicon")
+      let navBar = document.querySelector("#nav-menu")
+      menuIcon.onclick = ()=>{
+          menuIcon.classList.toggle('bx-x')
+          navBar.classList.toggle('active')
+          
+      }
+
+      let currentIndex = 0;
+      </script>
+  </body>
+</html>

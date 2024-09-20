@@ -1,0 +1,382 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    font-family: 'Nunito',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
+
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+ background: #eee;
+}
+.container{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+header .container  {
+    width: 100%;
+     
+    margin: 0% auto;
+    background-color: white;
+   
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+.nav_logo{
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: auto;
+    display:flex;
+    font-size: 2rem;
+}
+.nav_menu a{
+    /* height: 3.5rem; */
+    position: relative;
+    text-transform: capitalize;
+    font-size: 1em;
+    color: rgb(12, 12, 12);
+    font-weight: 500;
+    margin-right: 3.5em;
+    font-size: 20px;
+}
+.nav_menu a:hover{
+    color: rgb(129, 127, 125);
+}
+#menuicon{
+    font-size: 3.6em;
+    color: rgb(8, 8, 8);
+display: none;}
+
+.container .title{
+    font-size: 3.5rem;
+    color: #444;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container .product-container h1{
+   text-align:  center;
+   font-size: 20px ;
+   margin-bottom: 2em;
+}
+.grids{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4rem;
+}
+.product,
+.product1 {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #fff;
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0,.1);
+    outline: .1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+   
+}
+.product:hover{
+    outline: .2rem solid #222;
+    outline-offset:0;
+}
+.product img,
+.product1 img{
+    height: 25rem;
+}
+.product img:hover, 
+.products img:hover{
+   transform: scale(.9);
+}
+.product h3,
+.products h3{
+    padding: 5rem 0;
+    font-size: 2rem;
+    color: #444;
+}
+.product h3:hover,
+.products h3:hover{
+   color: aquamarine;
+}
+.product .price,
+.products .price{
+    font-size: 2.5rem;
+    color: #444;
+}
+.product-containers h1{
+    text-align:  center;
+   font-size: 20px ;
+   margin-bottom: 2em;
+   margin-top: 2em;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4rem;
+}
+.product1:hover{
+    outline: .2rem solid #222;
+    outline-offset:0;
+}
+
+.product-reviews,
+.product-reviews1 {
+    position: fixed;
+    top:0; left:0;
+     
+     min-height: 100vh; 
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+.previews,
+.previews1{
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin: 2rem;
+    width: 40rem;
+ 
+}
+.previews.active
+{
+    display: inline-block;
+
+}
+.previews1.active{
+    display: inline-block;
+
+}
+
+
+.previews img,
+.previews1 img{
+    height: 30rem;
+}
+.previews i.bx,
+.previews1 i.bx{
+    position: absolute;
+    top: 1rem; right: 1.5rem;
+    cursor: pointer;
+    color: #444;
+    font-size: 20px;
+}
+.previews i.bx:hover,
+.previews1 i.bx:hover{
+    transform: rotate(90deg);
+}
+.previews h3,
+.previews1 h3{
+    color: #444;
+    padding: 5rem 0;
+    font-size: 2.5rem;
+
+}
+.previews p,
+.previews1 p{
+    line-height: 1.5;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: #777;
+
+}
+.previews .price,
+.previews1 .price{
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    color: aqua;
+
+}
+.previews .buttons,
+.previews1 .buttons{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}  
+ .previews .buttons a,
+ .previews1 .buttons a{
+    flex: 1 1 16rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: #444;
+    border: 3rem solid #444;
+ }
+
+ .previews .buttons a:hover,
+ .previews1 .buttons a:hover{
+    background: #444;
+    color: #fff;
+ }
+ 
+ footer .container{
+    width: 100%;
+    margin: 0% auto;
+    background-color: rgb(218, 209, 209);
+    color: rgb(36, 34, 34);
+    border-radius: 10px;
+    margin-top: 2em;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+
+ }
+ .ready h3{
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Montserrat' ;
+ }
+ .ready p{
+    text-align: center;
+    font-size: 20px;
+ }
+.links{
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6em; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 2em;
+ 
+  padding-left: 2em;
+}
+.links h3{
+    font-size: 18px;
+    padding-bottom: 20px;
+
+}
+.links a{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+ 
+
+ 
+
+
+@media screen  and (max-width:991px) {
+    header .container{
+          position: fixed; 
+    }
+    #menuicon{
+        display: block;
+    }
+    html{
+        font-size: 62.5%;
+    }
+    .nav_menu{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background: linear-gradient(135deg,#a5a7a6, #373542);
+        border-top: o.1rem solid black;
+        display: none;
+        padding-left: -2em;
+        border-radius: 10px;
+        text-align: center;
+        
+
+        
+    }
+    .nav_menu.active{
+        display: block;
+    }
+    .nav_menu a{
+        display: block;
+        font-size: 2em;
+        color: white;
+         margin: 2rem 0; 
+    }
+    .title{
+        margin-top: 3em;
+    }
+}
+@media screen and( max-width:750px) {
+
+    .links{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap:2em;
+     }    
+}
+
+@media screen and  (max-width:550px) {
+    .article h1{
+        font-size: 20px;
+    }
+    .ready h3{
+        font-size: 30px;
+        padding-bottom: 1em;
+    }
+}
+@media screen and (max-width:490px) {
+    html{
+        font-size: 62.5%;
+    }
+    
+
+.previews p,
+.previews1 p{
+    line-height: 1;
+    padding: 10px 0;
+    font-size: 20px;
+    color: #777;
+    
+
+}
+.previews .price,
+.previews1 .price{
+    padding: 20px;
+    font-size: 20px;
+    color: aqua;
+
+}
+    .previews,
+.previews1{
+    margin: 20px;
+    padding: 20px;
+    margin-top: 20em;
+}
+
+    .container .title{
+font-size: 1.5rem;
+padding-top: 2em;
+    }
+    .container .product-container h1{
+        font-size: 18px;
+    }
+    .ready h3{
+        font-size: 15px;
+    }
+    .ready p{
+        font-size: 10px;
+    }
+}
