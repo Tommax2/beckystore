@@ -46,6 +46,11 @@ header .container  {
     display:flex;
     font-size: 2rem;
 }
+
+.nav_logo img{
+    height: 30px;
+    width: 30px;
+}
 .nav_menu a{
     /* height: 3.5rem; */
     position: relative;
@@ -317,6 +322,57 @@ display: none;}
     .title{
         margin-top: 3em;
     }
+    
+    
+    .previews h3,
+    .previews1 h3{
+        color: #444;
+        padding: 20px;
+        font-size: 17px;
+    
+    }
+    .previews p,
+    .previews1 p{
+        line-height: 1;
+        padding: 2px;
+        font-size: 10px;
+        color: #777;
+    
+    }
+.previews .price,
+.previews1 .price{
+    padding: 20px;
+    font-size: 20px;
+    color: aqua;
+
+}
+    .previews img,
+.previews1 img{
+    height: 20rem;
+}
+    .previews,
+.previews1{
+    margin: 20px;
+    padding: 20px;
+    margin-top: 10em;
+     width: 28rem;
+}
+
+
+.previews .buttons,
+.previews1 .buttons{
+    
+    gap: 1.5rem;
+    
+    margin-top: 20px;
+}  
+ 
+    .links{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap:2em;
+     }    
 }
 @media screen and( max-width:750px) {
 
@@ -343,15 +399,21 @@ display: none;}
     }
     
 
-.previews p,
-.previews1 p{
-    line-height: 1;
-    padding: 10px 0;
-    font-size: 20px;
-    color: #777;
+    .previews h3,
+    .previews1 h3{
+        color: #444;
+        padding: 20px;
+        font-size: 17px;
     
-
-}
+    }
+    .previews p,
+    .previews1 p{
+        line-height: 1;
+        padding: 2px;
+        font-size: 10px;
+        color: #777;
+    
+    }
 .previews .price,
 .previews1 .price{
     padding: 20px;
@@ -371,6 +433,30 @@ display: none;}
      width: 28rem;
 }
 
+
+.previews .buttons,
+.previews1 .buttons{
+    
+    gap: 1.5rem;
+    
+    margin-top: 20px;
+}  
+ .previews .buttons a,
+ .previews1 .buttons a{
+    flex: 1 1 13rem;
+    padding: 1rem;
+    font-size: 20px;
+    color: #444;
+    border:  20px solid #444;
+ }
+
+ .previews .buttons a:hover,
+ .previews1 .buttons a:hover{
+    background: #444;
+    color: #fff;
+ }
+ 
+
     .container .title{
 font-size: 1.5rem;
 padding-top: 2em;
@@ -384,4 +470,7 @@ padding-top: 2em;
     .ready p{
         font-size: 10px;
     }
+}
+@media screen and (max-width:450px){
+
 }

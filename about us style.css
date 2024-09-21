@@ -43,6 +43,11 @@ header .container  {
     align-items: center;
    
 }
+
+.nav_logo img{
+    height: 30px;
+    width: 30px;
+}
 .nav_logo{
     font-weight: 600;
     cursor: pointer;
@@ -246,4 +251,11 @@ footer .container{
     .article p{
         font-size: 10px;
     }
+    .ready h3{
+        font-size: 24px;
+    }
+    .ready p{
+        font-size: 10px;
+    }
+    
 } 
