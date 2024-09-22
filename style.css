@@ -381,6 +381,13 @@ display: none;}
     .abouts p{
         font-size: 15px;
     }
+    
+    .links{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap:2em;
+     }    
 }
 
 
