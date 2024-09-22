@@ -9,7 +9,7 @@
     border: none;
     text-decoration: none;
     transition: all .2s linear;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 
 }
 html{
@@ -96,6 +96,7 @@ display: none;}
    align-self: center;
    margin-right: 3em;
   gap: 2em;
+  text-transform: lowercase;
    
 }
 .phone i.bx,
@@ -106,6 +107,7 @@ display: none;}
     border: 1px solid;
     padding: 10px 14px;
     background-color:rgb(218, 209, 209) ;
+
     
 }
 
@@ -222,8 +224,15 @@ footer .container{
    margin: 0;
    
   
- ;
+ 
    
+}
+
+.phone a,
+.email a,
+.location a{
+    font-size: 15px;
+    
 }
     
 .phone i.bx,

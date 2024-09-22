@@ -435,6 +435,7 @@ display: none;}
         font-size: 16px;
     }
 
+
     .home h1{
         font-size: 18px;
     
@@ -442,8 +443,12 @@ display: none;}
     .home p{
         font-size: 17px;
     }
+    .abouts h1{
+        padding-bottom: 19px;
+        font-size: 18px;
+    }
     .abouts p{
-        font-size: 17px;
+        font-size: 13px;
     }
    
     .ready h3{
