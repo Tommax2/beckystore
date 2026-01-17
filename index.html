@@ -15,10 +15,11 @@
   <body>
     <!--   HEADER -->
 
-    <header class="headar" id="header">
+    <header id="header">
       <div class="container">
         <a href="index.html" class="nav_logo">
-         <img src="logo.jpg" alt="">
+         <img src="logo.jpg" alt="EverythingbyBecky Logo">
+         <span>EverythingbyBecky</span>
         </a>
         <nav class="nav_menu" id="nav-menu">
           <a href="index.html">Home</a>
@@ -48,21 +49,15 @@
       <!-- ABOUT SECTION-->
        <section class="about">
         <div class="container">
-          <img src="hand made nails.jpg" loading="lazy">
+          <img src="hand made nails.jpg" alt="Handmade Nails" loading="lazy">
           <div class="abouts">
-            <h1>Welcome to EverythingbyBecky!
-
-            </h1>
-            <p>At EverythingbyBecky, we believe in empowering self-expression through creativity and beauty. Our unique store offers a delightful mix of products designed to bring out your inner sparkle and let your imagination run wild!<br>
-
-              <b>Nails</b>: Discover our vibrant collection of nail accessories, from elegant press-ons to dazzling nail art kits. Whether you're into bold designs or subtle elegance, we have the perfect nails to match your mood and style.<br>
-              
-              <b>Girls Stickers</b>: Add some fun and personality to your day with our wide selection of girls' stickers! Perfect for planners, journals, laptops, or just about anything that needs a splash of cute, our stickers are designed to inspire creativity and fun.
-              
-              </p>
-              <a href="About us.html">Learn more</a>
+            <h1>Elevate Your Style</h1>
+            <p>At EverythingbyBecky, we believe in empowering self-expression through creativity and beauty. Our unique store offers a delightful mix of products designed to bring out your inner sparkle and let your imagination run wild.</p>
+            
+            <p>From elegant press-ons to dazzling nail art kits, we have the perfect designs to match your mood. Add personality to your everyday items with our curated selection of trendy stickers, designed to inspire and delight.</p>
+            
+            <a href="About us.html">Discover Our Story</a>
           </div>
-    
         </div>
        </section>
       
@@ -129,7 +124,7 @@
               <div class="ready">
                 <div>
                  <h3>Ready to work with us?</h3>
-                 <p>Experience top-notch customber service and let us guide you on aesthetic decorations </p>
+                 <p>Experience top-notch customer service and let us guide you on aesthetic decorations </p>
                 </div>
               </div>
               <div class="links">
@@ -154,36 +149,46 @@
     <script>
         let menuIcon = document.querySelector("#menuicon")
         let navBar = document.querySelector("#nav-menu")
+        let navLinks = document.querySelectorAll(".nav_menu a")
+
         menuIcon.onclick = ()=>{
             menuIcon.classList.toggle('bx-x')
             navBar.classList.toggle('active')
-            
         }
+
+        navLinks.forEach(link => {
+            link.onclick = () => {
+                menuIcon.classList.remove('bx-x')
+                navBar.classList.remove('active')
+            }
+        })
 
         let currentIndex = 0;
 
-function showSlide(index) {
-    const slides = document.querySelectorAll(".slide");
-    if (index >= slides.length) {
-        currentIndex = 0;
-    } else if (index < 0) {
-        currentIndex = slides.length - 1;
-    } else {
-        currentIndex = index;
-    }
+        function showSlide(index) {
+            const slides = document.querySelectorAll(".slide");
+            if (index >= slides.length) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = slides.length - 1;
+            } else {
+                currentIndex = index;
+            }
 
-    const carousel = document.querySelector(".carousel");
-    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
+            const carousel = document.querySelector(".carousel");
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
 
-function nextSlide() {
-    showSlide(currentIndex + 1);
-}
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
 
-function prevSlide() {
-    showSlide(currentIndex - 1);
-}
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
 
+        // Auto slide
+        setInterval(nextSlide, 5000);
     </script>
 <!--    
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>

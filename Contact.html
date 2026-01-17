@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="contact us style.css" />
   </head>
   <body>
-    <header class="headar" id="header">
+    <header id="header">
       <div class="container">
         <a href="index.html" class="nav_logo">
-          <img src="logo.jpg" alt="" />
+          <img src="logo.jpg" alt="EverythingbyBecky Logo" />
+          <span>EverythingbyBecky</span>
         </a>
         <nav class="nav_menu" id="nav-menu">
           <a href="index.html">Home</a>
@@ -27,10 +28,9 @@
     </header>
     <div class="contact">
       <div class="container">
-        <div class="title"><h2>Contact Us</h2></div>
-        <h2>need any product?</h2>
-        <h3>Get in touch with us</h3>
-        <h1>Feel free to send us a mail or give us a call</h1>
+        <div class="title"><h2>Get in Touch</h2></div>
+        <h3>We'd Love to Hear From You</h3>
+        <p style="font-size: 1.6rem; color: var(--text-muted); margin-bottom: 4rem;">Whether you have a question about our products, pricing, or anything else, our team is ready to answer all your questions.</p>
         <div class="icon">
           <div class="phone">
             <i class="bx bxs-phone" style="color: #131414"></i>
@@ -61,7 +61,7 @@
           <div>
             <h3>Ready to work with us?</h3>
             <p>
-              Experience top-notch customber service and let us guide you on
+              Experience top-notch customer service and let us guide you on
               aesthetic decorations
             </p>
           </div>
@@ -92,12 +92,19 @@
     <script>
       let menuIcon = document.querySelector("#menuicon");
       let navBar = document.querySelector("#nav-menu");
+      let navLinks = document.querySelectorAll(".nav_menu a");
+
       menuIcon.onclick = () => {
         menuIcon.classList.toggle("bx-x");
         navBar.classList.toggle("active");
       };
 
-      let currentIndex = 0;
+      navLinks.forEach(link => {
+        link.onclick = () => {
+          menuIcon.classList.remove("bx-x");
+          navBar.classList.remove("active");
+        };
+      });
     </script>
   </body>
 </html>

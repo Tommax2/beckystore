@@ -1,265 +1,337 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-*{
-    margin: 0%;
-    padding: 0%;
+:root {
+    --primary: #d481a2;
+    --primary-dark: #a65d7a;
+    --secondary: #2d2727;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --bg-soft: #fcf8f9;
+    --white: #ffffff;
+    --shadow-sm: 0 2px 10px rgba(0,0,0,0.05);
+    --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat' sans-serif;
-    outline: none;
-    border: none;
+    list-style: none;
     text-decoration: none;
-    transition: all .2s linear;
-    /* text-transform: capitalize; */
-
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
 }
-html{
+
+html {
     font-size: 62.5%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
-.container{
 
-    max-width: 1500px;
+body {
+    background-color: var(--bg-soft);
+    color: var(--text-main);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 3rem 2rem;
+    padding: 0 2rem;
 }
 
-header .container  {
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    position: fixed;
     width: 100%;
-     
-    margin: 0% auto;
-    background-color: white;
-   
     top: 0;
-    left: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-   
-}
-.nav_logo{
-    font-weight: 600;
-    cursor: pointer;
-    margin-right: auto;
-    display:flex;
-    font-size: 2rem;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
 }
 
-.nav_logo img{
-    height: 30px;
-    width: 30px;
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
 }
-.nav_menu a{
-    /* height: 3.5rem; */
-    position: relative;
-    text-transform: capitalize;
-    font-size: 1em;
-    color: rgb(12, 12, 12);
+
+.nav_logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav_logo img {
+    height: 4rem;
+    width: auto;
+    border-radius: 50%;
+}
+
+.nav_menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav_menu a {
+    font-size: 1.5rem;
+    color: var(--secondary);
     font-weight: 500;
-    margin-right: 3.5em;
-    font-size: 20px;
+    margin-left: 4rem;
+    transition: var(--transition);
+    position: relative;
+    letter-spacing: 0.5px;
 }
-.nav_menu a:hover{
-    color: rgb(129, 127, 125);
+
+.nav_menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: var(--transition);
 }
-#menuicon{
-    font-size: 3.6em;
-    color: rgb(8, 8, 8);
-display: none;}
-.contact .container{
+
+.nav_menu a:hover {
+    color: var(--primary);
+}
+
+.nav_menu a:hover::after {
+    width: 100%;
+}
+
+#menuicon {
+    font-size: 3rem;
+    color: var(--secondary);
+    display: none;
+    cursor: pointer;
+}
+
+.contact {
+    padding: 12rem 0 8rem;
+}
+
+.contact .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.title{
-    font-size: 30px;
-    padding-bottom: 2em;
-}
-.contact .container h3{
-    font-size: 30px;
-    padding-bottom: 20px;
-
-}
-.contact h2{
-    padding-bottom: 10px;
-}
-.contact h1{
-    padding-bottom: 20px;
-}
-
-.phone,
-.email,
-.location{
-   display: flex;
-   padding-bottom: 20px;
-   align-self: center;
-   margin-right: 3em;
-  gap: 2em;
-  text-transform: lowercase;
-   
-}
-.phone i.bx,
-.email i.bx,
-.location i.bx{
-    font-size: 40px;
-    border-radius: 50%;
-    border: 1px solid;
-    padding: 10px 14px;
-    background-color:rgb(218, 209, 209) ;
-
-    
-}
-
-.phone a,
-.email a,
-.location a{
-    font-size: 20px;
-    margin-top: 10px;
-}
-footer .container{
-   width: 100%;
-   margin: 0% auto;
-   background-color: rgb(218, 209, 209);
-   color: rgb(36, 34, 34);
-   border-radius: 10px;
-   margin-top: 2em;
-   /* display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column; */
-
-}
-.ready h3{
-   font-size: 40px;
-   text-align: center;
-   font-family: 'Montserrat' ;
-}
-.ready p{
-   text-align: center;
-   font-size: 20px;
-}
-.links{
-   /* display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   gap: 6em; */
-   display: flex;
-   justify-content: space-evenly;
-   align-items: center;
-   padding-top: 2em;
-
- padding-left: 2em;
-}
-.links h3{
-   font-size: 18px;
-   padding-bottom: 20px;
-
-}
-.links a{
-   display: flex;
-   flex-direction: column;
-   font-size: 18px;
-   padding-bottom: 20px;
-}
-
-
- 
-
-
-@media screen  and (max-width:991px) {
-    header .container{
-          position: fixed; 
-    }
-    #menuicon{
-        display: block;
-    }
-    html{
-        font-size: 62.5%;
-    }
-    .nav_menu{
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        background: linear-gradient(135deg,#a5a7a6, #373542);
-        border-top: o.1rem solid black;
-        display: none;
-        padding-left: -2em;
-        border-radius: 10px;
-        text-align: center;
-
-        
-    }
-    .nav_menu.active{
-        display: block;
-    }
-    .nav_menu a{
-        display: block;
-        font-size: 2em;
-        color: white;
-         margin: 2rem 0; 
-    }
-    
-
-    .links{
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-        gap:2em;
-     }    
-}
-
-@media screen  and (max-width:495px) {
-    .ready h3{
-        font-size: 24px;
-    }
-    .ready p{
-        font-size: 10px;
-    }
-    
-.phone,
-.email,
-.location{
- flex-direction: column;
-   margin: 0;
-   
-  
- 
-   
-}
-
-.phone a,
-.email a,
-.location a{
-    font-size: 15px;
-    
-}
-    
-.phone i.bx,
-.email i.bx,
-.location i.bx{
-    font-size: 20px;
-    width: 50px;
-    border-radius: 40%;
-    border: 1px solid;
     text-align: center;
-padding: 0%;
-  margin: 0;
-    background-color:rgb(218, 209, 209) ;
-    
 }
 
-.contact .container h3{
-    font-size: 20px;
-    padding-bottom: 20px;
-
-}
-.contact h1{
-    font-size: 10px;
-}
-}
-@media screen  and (max-width:411px) {
-   
- 
+.title {
+    margin-bottom: 6rem;
 }
 
+.title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    color: var(--secondary);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.contact h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+}
+
+.icon {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 4rem;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 6rem;
+}
+
+.phone, .email, .location {
+    background-color: var(--white);
+    padding: 4rem 2rem;
+    border-radius: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.phone:hover, .email:hover, .location:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+}
+
+.phone i.bx, .email i.bx, .location i.bx {
+    font-size: 3.5rem;
+    color: var(--white);
+    background-color: var(--primary);
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.phone a, .email a, .location a {
+    font-size: 1.6rem;
+    color: var(--text-muted);
+    transition: var(--transition);
+}
+
+.phone a:hover, .email a:hover, .location a:hover {
+    color: var(--primary);
+}
+
+footer {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 10rem 0 5rem;
+    margin-top: 10rem;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.ready {
+    text-align: center;
+    margin-bottom: 8rem;
+    padding-bottom: 8rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ready h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+}
+
+.ready p {
+    font-size: 1.8rem;
+    opacity: 0.7;
+    font-weight: 300;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 4rem;
+    text-align: center;
+}
+
+.links h3 {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.links a {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+    display: block;
+}
+
+.links a:hover {
+    color: var(--white);
+    transform: translateX(5px);
+}
+
+@media screen and (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    #menuicon {
+        display: block;
+    }
+
+    .nav_menu {
+        position: fixed;
+        top: 8rem;
+        right: -100%;
+        width: 70%;
+        height: calc(100vh - 8rem);
+        background-color: var(--white);
+        flex-direction: column;
+        justify-content: center;
+        transition: var(--transition);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+        display: flex;
+        z-index: 1001;
+    }
+
+    .nav_menu.active {
+        right: 0;
+    }
+
+    .nav_menu a {
+        margin: 1.5rem 0;
+        font-size: 2rem;
+        margin-left: 0;
+        color: var(--secondary);
+    }
+
+    .title {
+        margin: 10rem 0 4rem;
+    }
+
+    .icon {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title h2 {
+        font-size: 3.5rem;
+    }
+
+    .contact .container h3 {
+        font-size: 2.8rem;
+    }
+
+    .ready h3 {
+        font-size: 3.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+
+    .title h2 {
+        font-size: 2.8rem;
+    }
+
+    .contact .container h3 {
+        font-size: 2.2rem;
+    }
+
+    .ready h3 {
+        font-size: 2.4rem;
+    }
+
+    .links {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
